@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Scrape Urls</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Url</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @scrape_urls.each do |scrape_url| %>
+      <tr>
+        <td><%= scrape_url.url %></td>
+        <td><%= link_to 'Show', scrape_url %></td>
+        <td><%= link_to 'Edit', edit_scrape_url_path(scrape_url) %></td>
+        <td><%= link_to 'Destroy', scrape_url, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Scrape Url', new_scrape_url_path %>

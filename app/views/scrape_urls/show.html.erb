@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @scrape_url.url %>
+</p>
+
+<p>
+  <strong>Harvested Hyper Links ( <%= @scrape_url.hyper_links.length %> )</strong>
+  <br/>
+  <hr/>
+  <% @scrape_url.hyper_links.each do |h| %>
+    <%= h.parameters.length %> params for  : <%= h.link %> <br/>
+    <hr/>
+  <% end %>
+</p>
+
+
+<%= link_to 'Edit', edit_scrape_url_path(@scrape_url) %> |
+<%= link_to 'Back', scrape_urls_path %>

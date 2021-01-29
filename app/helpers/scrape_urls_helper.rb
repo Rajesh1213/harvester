@@ -1,0 +1,2 @@
+module ScrapeUrlsHelper
+end
