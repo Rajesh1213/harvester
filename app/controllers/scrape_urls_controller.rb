@@ -59,7 +59,7 @@ class ScrapeUrlsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_scrape_url
-      @scrape_url = ScrapeUrl.find(params[:id])
+      @scrape_url = ScrapeUrl.includes(:hyper_links).find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.

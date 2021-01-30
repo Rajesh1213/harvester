@@ -9,7 +9,7 @@
   <strong>Harvested Hyper Links ( <%= @scrape_url.hyper_links.length %> )</strong>
   <br/>
   <hr/>
-  <% @scrape_url.hyper_links.each do |h| %>
+  <% hyper_links(@scrape_url).each do |h| %>
     <%= h.parameters.length %> params for  : <%= h.link %> <br/>
     <hr/>
   <% end %>
